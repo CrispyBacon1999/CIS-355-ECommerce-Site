@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Infinity Marketplace - Sign Up</title>
+        <%- include("partials/bootstrap.ejs") %>
+        <link rel="stylesheet" href="css/login.css" />
+    </head>
+    <body class="text-center">
+        <form class="form-login" action="/register" method="POST">
+            <img
+                src="/images/gauntlet.svg"
+                alt="Logo"
+                class="mb-4"
+                width="72"
+                height="72"
+            />
+            <h1 class="h3 mb-3 font-weight-normal">Sign In</h1>
+            <label for="user_name" class="text-start">Username</label>
+            <input
+                class="form-control mb-2"
+                type="text"
+                name="user_name"
+                id="user_name"
+                required
+                autofocus
+                placeholder="Username"
+            />
+            <label for="name" class="text-start">Name</label>
+            <input
+                class="form-control mb-2"
+                type="text"
+                name="name"
+                id="name"
+                required
+                placeholder="Name"
+            />
+            <label for="starting_balance" class="text-start"
+                >Starting Balace</label
+            >
+            <input
+                class="form-control mb-2"
+                type="number"
+                name="starting_balance"
+                id="starting_balance"
+                required
+                placeholder="Starting Balance"
+                value="100"
+            />
+
+            <button class="btn btn-lg btn-primary btn-block my-2" type="submit">
+                Sign Up
+            </button>
+            <p>Already have an account? <a href="/signin">Login</a></p>
+        </form>
+    </body>
+</html>

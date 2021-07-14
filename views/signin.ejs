@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Infinity Marketplace - Login</title>
+        <%- include("partials/bootstrap.ejs") %>
+        <link rel="stylesheet" href="css/login.css" />
+    </head>
+    <body class="text-center">
+        <form class="form-login" method="POST" action="/login">
+            <img
+                src="/images/gauntlet.svg"
+                alt="Logo"
+                class="mb-4"
+                width="72"
+                height="72"
+            />
+            <h1 class="h3 mb-3 font-weight-normal">Sign In</h1>
+            <label for="user_name" class="text-start">Username</label>
+            <input
+                class="form-control mb-2"
+                type="text"
+                name="user_name"
+                id="user_name"
+                required
+                autofocus
+                placeholder="Username"
+            />
+
+            <button class="btn btn-lg btn-primary btn-block my-2" type="submit">
+                Sign In
+            </button>
+            <p>No account? <a href="/signup">Create one instead</a></p>
+        </form>
+    </body>
+</html>
